@@ -17,4 +17,16 @@ void main() {
   test('Testar conversão para uppercase teste 2', () {
     expect(my_tests.convertToUpper("dio"), equalsIgnoringCase("dio"));
   });
+
+  test('Valor maior que 50', () {
+    expect(my_tests.retornaValor(50), greaterThanOrEqualTo(50));
+  });
+
+  test('Começa com', () {
+    expect(my_tests.convertToUpper("dio"), startsWith("D"));
+  });
+
+  test('Valor diferente', () {
+    expect(my_tests.retornaValor(50), isNot(equals(49)));
+  });
 }

@@ -13,3 +13,7 @@ bool vazio(String value) {
 String convertToUpper(String texto) {
   return (texto.toUpperCase());
 }
+
+double retornaValor(double valor) {
+  return (valor);
+}
