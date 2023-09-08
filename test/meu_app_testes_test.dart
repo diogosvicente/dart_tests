@@ -1,3 +1,4 @@
+import 'package:meu_app_testes/classes/viacep.dart';
 import 'package:meu_app_testes/meu_app_testes.dart' as my_tests;
 import 'package:test/test.dart';
 
@@ -28,5 +29,12 @@ void main() {
 
   test('Valor diferente', () {
     expect(my_tests.retornaValor(50), isNot(equals(49)));
+  });
+
+  test('Retornar CEP', () async {
+    ViaCEP viacep = ViaCEP();
+    var body = await viacep.retornarCEP("01001000");
+    expect(body["bairro"], equals("Sé"));
+    expect(body["logradouro"], equals("Praça da Sé"));
   });
 }
